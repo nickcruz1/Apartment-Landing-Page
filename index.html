@@ -24,6 +24,15 @@
   <!-- Bootswatch Theme -->
   <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css">
 
+  <!-- Intro.js CDN (CSS Part)-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.3.0/introjs.min.css"
+    integrity="sha512-YZO1kAqr8VPYJMaOgT4ZAIP4OeCuAWoZqgdvVYjeqyfieNWrUTzZrrxpgAdDrS7nV3sAVTKdP6MSKhqaMU5Q4g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- Intro.js CDN (JS Part)-->
+  <script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+
   <!-- Chart.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -32,11 +41,24 @@
 
 <body style="overflow-x: hidden;">
 
+  <style>
+    /* Intro.js Tooltip colors */
+
+    .walkthrough {
+      color: blue;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
+
 
 
   <!-- Navbar Section -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" data-tooltipClass="walkthrough"
+    data-title="Navigation Menu" data-step="2"
+    data-intro="This is the navigation menu. Here you are able to click on links that take you to different parts of our website. Some of these links include: Home, Amenities, Newsletter, Available Units, Testimonials, and Contact">
+    <div class="container-fluid" data-tooltipClass="walkthrough" data-title="Welcome!" data-step="1"
+      data-intro="Hello and welcome to our website! Allow me to quickly walk you through the different parts of this website.">
       <button class="navbar-toggler d-lg-none  m-auto bg-info" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarBasic" aria-controls="#navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -94,12 +116,20 @@
         delectus error omnis earum quis fugit id aperiam vitae voluptatem sint animi explicabo nulla, quod alias!</p>
 
       <div class="d-flex justify-content-evenly">
-        <a href="#availableUnits" class="col-6 text-center m-2 p-2 mb-4"><button type="button"
-            class="btn btn-primary">See Homes</button>
+
+        <a href="#availableUnits" class=" text-center m-2 p-2 mb-4"><button type="button" class="btn btn-primary">See
+            Homes</button>
         </a>
-        <a href="#contact" class="col-6 text-center m-2 p-2 mb-4"><button type="button" class="btn btn-success">Contact
+
+        <button onclick="startWalkthrough()" type="button" class="text-center m-2 p-2 mb-4 btn btn-primary">Start
+          Walkthrough</button>
+
+
+
+        <a href="#contact" class="text-center m-2 p-2 mb-4"><button type="button" class="btn btn-success">Contact
             Us</button>
         </a>
+
       </div>
       <img class="col-12 w-75" src="assets/house.jpeg" alt="Showcase Picture" style="max-width: 600px;">
 
@@ -107,9 +137,13 @@
   </div>
 
 
+
+
   <!-- Amenities & Features Section-->
   <hr>
-  <div id="amenities" class="container container-fluid">
+  <div id="amenities" class="container container-fluid" data-tooltipClass="walkthrough"
+    data-title="Amenities & Features" data-step="3"
+    data-intro="These are the different amenities & features that we offer at our complex">
     <div class="row">
 
       <div class="d-flex justify-content-evenly align-items-center">
@@ -157,7 +191,9 @@
 
   <!-- Newsletter Section -->
 
-  <div id="newsletter" class="newsletterContainer d-flex justify-content-center w-100 align-items-center">
+  <div id="newsletter" class="newsletterContainer d-flex justify-content-center w-100 align-items-center"
+    data-tooltipClass="walkthrough" data-title="Newsletter" data-step="4"
+    data-intro="Here is where you can sign up for our monthly newsletter. Just click on the 'Sign Up' link and you will then be prompted to type in User information as well as a password.">
     <img class="svg mt-2 w-50 mx-0 mb-2" src="assets/subscribe.svg" alt="Sign-Up Form SVG" height="200px" width="auto">
     <div class="p-2 m-3">
       <div id="newsLetter" class="h2 text-center text-success mb-1">Sign up for our newsletter</div>
@@ -205,7 +241,9 @@
 
   <hr>
   <!-- Carousel Section -->
-  <div id="availableUnits" class="h2 text-center pt-4 pb-4 text-primary text-decoration-underline">Available Units</div>
+  <div id="availableUnits" class="h2 text-center pt-4 pb-4 text-primary text-decoration-underline"
+    data-tooltipClass="walkthrough" data-title="Available Units" data-step="5"
+    data-intro="These are some of the units we have that are currently available at our complex">Available Units</div>
   <div id="carouselWithIndicators" class="carousel slide w-75 d-block m-auto" data-bs-ride="carousel">
     <ol class="carousel-indicators">
       <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="0" class="active"></li>
@@ -250,7 +288,8 @@
   <hr>
   <!-- FAQ Section-->
   <div id="faq" class="h2 text-center text-primary p-2 text-decoration-underline">Frequently Asked Questions</div>
-  <div class="accordion w-75 d-block m-auto" id="accordionBasic">
+  <div class="accordion w-75 d-block m-auto" id="accordionBasic" data-tooltipClass="walkthrough" data-title="FAQ"
+    data-step="6" data-intro="Here is where we answer some of our most frequently asked questions">
     <div class="accordion-item border-light">
       <h2 class="accordion-header" id="headingOne">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
@@ -362,50 +401,50 @@
   <div id="testimonials"></div>
   <h2 class="bg-primary text-center p-4 mt-5 text-light fw-bold">Testimonials
 
+    <div class="row d-flex flex column justify-content-center" data-tooltipClass="walkthrough" data-title="Testimonials"
+      data-step="7"
+      data-intro="This is our testimonials section. Here you can read about past clients and their experience renting with us">
 
 
-    <div class="row d-flex flex column justify-content-center">
+      <div class="col-lg-3 col-12 m-1 d-flex flex-row justify-content-center">
 
 
-<div class="col-lg-3 col-12 m-1 d-flex flex-row justify-content-center">
+        <div class="card">
+          <img src="../assets/person1.jpeg" class="card-img-top" alt="Person 1">
+          <div class="card-body">
+            <h2 class="card-title fw-bold">Jane Doe</h2>
+            <p class="card-text fs-5">"I can't imagine renting with anyone else"</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-3 col-12 m-1 d-flex flex-row justify-content-center">
 
 
-  <div class="card">
-    <img src="../assets/person1.jpeg" class="card-img-top" alt="Person 1">
-    <div class="card-body">
-      <h2 class="card-title fw-bold">Jane Doe</h2>
-      <p class="card-text fs-5">"I can't imagine renting with anyone else"</p>
-    </div>
-  </div>
+        <div class="card">
+          <img src="../assets/person2.jpeg" class="card-img-top" alt="Person 2">
+          <div class="card-body">
+            <h2 class="card-title fw-bold">John Stewart</h2>
+            <p class="card-text fs-5">"If you're looking for low prices and high quality then you gotta rent here!" </p>
 
-</div>
+          </div>
+        </div>
 
-<div class="col-lg-3 col-12 m-1 d-flex flex-row justify-content-center">
+      </div>
 
-
-  <div class="card">
-    <img src="../assets/person2.jpeg" class="card-img-top" alt="Person 2">
-    <div class="card-body">
-      <h2 class="card-title fw-bold">John Stewart</h2>
-      <p class="card-text fs-5">"If you're looking for low prices and high quality then you gotta rent here!"   </p>
-      
-    </div>
-  </div>
-
-</div>
-
-<div class="col-lg-3 col-12 m-1 d-flex flex-row justify-content-center">
+      <div class="col-lg-3 col-12 m-1 d-flex flex-row justify-content-center">
 
 
-  <div class="card">
-    <img src="../assets/person3.jpeg" class="card-img-top" alt="Person 3">
-    <div class="card-body">
-      <h2 class="card-title fw-bold">Amy Simpson</h2>
-      <p class="card-text fs-5">"I have been renting here for over 10 years and I've loved every minute of it"</p>
-    </div>
-  </div>
+        <div class="card">
+          <img src="../assets/person3.jpeg" class="card-img-top" alt="Person 3">
+          <div class="card-body">
+            <h2 class="card-title fw-bold">Amy Simpson</h2>
+            <p class="card-text fs-5">"I have been renting here for over 10 years and I've loved every minute of it"</p>
+          </div>
+        </div>
 
-</div>
+      </div>
 
     </div>
 
@@ -415,7 +454,8 @@
 
 
   <!-- Chart Section (Chart.js)-->
-  <div class="row d-flex justify-content-center pt-4">
+  <div class="row d-flex justify-content-center pt-4" data-tooltipClass="walkthrough" data-title="Stats" data-step="8"
+    data-intro="Here you will find our stats/charts that compare our rental prices with that of our competitors.">
     <h2 class="fw-bold text-center text-primary text-decoration-underline mb-3">Rental Prices</h2>
     <div id="prices" class="col-5 d-block m-auto" style="max-width: 400px;">
       <div class="h5 text-center text-primary p-2">Our Prices</div>
@@ -430,7 +470,8 @@
 
   <!-- Feedback Form -->
   <div id="contact" class="h2 text-center text-primary p-4 text-decoration-underline">Contact Us</div>
-  <div class="col-12 w-75 m-auto">
+  <div class="col-12 w-75 m-auto" data-tooltipClass="walkthrough" data-title="Contact Form" data-step="9"
+    data-intro="Lastly, if you have any feedback for us or just need to get in touch with us please use the form below.">
     <form action="contact.txt" class="row g-3 needs-validation">
       <div class="col-md-6">
         <label for="validationCustom01" class="form-label">First name</label>

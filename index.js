@@ -1,3 +1,10 @@
+// Call Intro.js Library (Interactive Walkthrough)
+function startWalkthrough() {
+    introJs().start();
+}
+
+
+
 // Form Validation 
 
 var forms = document.querySelectorAll('.needs-validation')
