@@ -41,34 +41,43 @@
 
 <body style="overflow-x: hidden;">
 
-  <style>
-    /* Intro.js Tooltip colors */
+<!-- Intro.js CDN (CSS Part)-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.3.0/introjs.min.css" integrity="sha512-YZO1kAqr8VPYJMaOgT4ZAIP4OeCuAWoZqgdvVYjeqyfieNWrUTzZrrxpgAdDrS7nV3sAVTKdP6MSKhqaMU5Q4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    .walkthrough {
-      color: blue;
-      font-weight: bold;
-      font-size: 20px;
-    }
-  </style>
+<!-- Intro.js CDN (JS Part)-->
+<script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
 
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+<!-- Bootstrap 5 CDN -->
+
+<!-- Bootstrap (CSS Part) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<!-- Bootstrap (JavaScript Part) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+
+<!-- Bootstrap Version 5 Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+<!-- Bootswatch Theme -->
+<link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css">
+
+<body style="overflow-x: hidden;">
 
   <!-- Navbar Section -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light" data-tooltipClass="walkthrough"
-    data-title="Navigation Menu" data-step="2"
-    data-intro="This is the navigation menu. Here you are able to click on links that take you to different parts of our website. Some of these links include: Home, Amenities, Newsletter, Available Units, Testimonials, and Contact">
-    <div class="container-fluid" data-tooltipClass="walkthrough" data-title="Welcome!" data-step="1"
-      data-intro="Hello and welcome to our website! Allow me to quickly walk you through the different parts of this website.">
-      <button class="navbar-toggler d-lg-none  m-auto bg-info" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarBasic" aria-controls="#navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" data-tooltipClass="walkthrough" data-title="Navigation Menu" data-step="2" data-intro="This is the navigation menu. Here you are able to click on links that take you to different parts of our website. Some of these links include: Home, Amenities, Newsletter, Available Units, Testimonials, and Contact">
+    <div class="container-fluid" data-tooltipClass="walkthrough" data-title="Welcome!" data-step="1" data-intro="Hello and welcome to our website! Allow me to quickly walk you through the different parts of this website.">
+      <button class="navbar-toggler d-lg-none  m-auto bg-info" type="button" data-bs-toggle="collapse" data-bs-target="#navbarBasic" aria-controls="#navbarBasic" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse show" id="navbarBasic">
         <ul class="navbar-nav">
 
           <li class="nav-item bg-primary m-1">
-            <a class="nav-link text-light active text-center" aria-current="page" href="#"><i
-                class="bi bi-house-fill text-light"></i>
+            <a class="nav-link text-light active text-center" aria-current="page" href="#"><i class="bi bi-house-fill text-light"></i>
               Home</a>
           </li>
           <li class="nav-item bg-primary m-1 text-center">
@@ -79,8 +88,7 @@
               Newsletter</a>
           </li>
           <li class="nav-item bg-primary m-1 text-center dropdown">
-            <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <i class="bi bi-house-door-fill text-light"></i> Available Units
             </a>
             <ul class="dropdown-menu bg-primary" aria-labelledby="navbarDropdownMenuLink">
@@ -98,112 +106,96 @@
               Testimonials</a>
           </li>
           <li class="nav-item bg-primary m-1 text-center">
-            <a class="nav-link text-light" href="#contact" tabindex="-1" aria-disabled="true"><i
-                class="bi bi-telephone-fill text-light"></i> Contact</a>
+            <a class="nav-link text-light" href="#contact" tabindex="-1" aria-disabled="true"><i class="bi bi-telephone-fill text-light"></i> Contact</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
 
-
   <!-- Showcase Section-->
   <div class="row">
+    <h2 class="showcase text-left fs-1 text-primary m-2 p-4 fw-bold"> <i class="bi bi-house-door-fill text-light"></i> Better Homes Apartment Complex</h2>
+    
+    <img class="col-12 w-100" src="assets/house.jpeg" alt="Showcase Picture" style="max-width: 800px;">
+    
     <div class="text-center m-2 p-2 mb-0 pb-0">
       <h2 class="display-5">Here... You Are <span class="text-primary fw-bold">Home</span></h2>
-      <p class="text-center" style="margin-left: 15%; margin-right: 15%;">Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Totam nam quo aliquam quas porro
-        delectus error omnis earum quis fugit id aperiam vitae voluptatem sint animi explicabo nulla, quod alias!</p>
+      <p class="text-center" style="margin-left: 15%; margin-right: 15%;">At <b class="text-primary">Better Homes Apartment Complex</b> we strive to be more than just a place you live. We strive to be a place you can truly feel at <b class="text-primary">HOME</b></p>
 
       <div class="d-flex justify-content-evenly">
 
-        <a href="#availableUnits" class=" text-center m-2 p-2 mb-4"><button type="button" class="btn btn-primary">See
+        <a href="#availableUnits" class=" text-center m-2 p-2 mb-4"><button type="button" class="btn btn-primary"><i class="bi bi-house-door text-light"></i> See
             Homes</button>
         </a>
 
-        <button onclick="startWalkthrough()" type="button" class="text-center m-2 p-2 mb-4 btn btn-primary">Start
+        <button onclick="startWalkthrough()" type="button" class="text-center m-2 p-2 mb-4 btn btn-primary"><i class="bi bi-person"></i> Start
           Walkthrough</button>
 
-
-
-        <a href="#contact" class="text-center m-2 p-2 mb-4"><button type="button" class="btn btn-success">Contact
+        <a href="#contact" class="text-center m-2 p-2 mb-4"><button type="button" class="btn btn-success"><i class="bi bi-telephone text-light"></i> Contact
             Us</button>
-        </a>
 
       </div>
-      <img class="col-12 w-75" src="assets/house.jpeg" alt="Showcase Picture" style="max-width: 600px;">
 
     </div>
   </div>
-
-
-
 
   <!-- Amenities & Features Section-->
   <hr>
-  <div id="amenities" class="container container-fluid" data-tooltipClass="walkthrough"
-    data-title="Amenities & Features" data-step="3"
-    data-intro="These are the different amenities & features that we offer at our complex">
+  <div id="amenities" class="container container-fluid" data-tooltipClass="walkthrough" data-title="Amenities & Features" data-step="3" data-intro="These are the different amenities & features that we offer at our complex">
     <div class="row">
 
-      <div class="d-flex justify-content-evenly align-items-center">
+      <div class="amenities_features d-flex justify-content-evenly align-items-center">
 
-        <div class="d-flex flex-column">
-          <div id="features" class="h2 text-center p-2 text-primary text-decoration-underline">Amenities & Features
+        <ul class="featuresContainer d-flex flex-column">
+          <div id="features" class="h2 text-center text-decoration-none p-2 text-primary">Amenities & Features
           </div>
-          <div class="text-center list p-2"> Recreational Areas</div>
-          <div class="text-center list p-2"> Pet-friendly Units</div>
-          <div class="text-center list p-2"> Trash Compactor</div>
-          <div class="text-center list p-2"> Laundry Facilities</div>
-          <div class="text-center list p-2"> In-unit Laundry</div>
-          <div class="text-center list p-2"> Air-Conditioning</div>
-          <div class="text-center list p-2"> Energy-efficient Appliances</div>
-        </div>
+          <li class="text-center text-light text-decoration-none p-2"> Recreational areas</li>
+           <li class="text-center text-light text-decoration-none p-2"> Pet friendly Units</li>
+           <li class="text-center text-light text-decoration-none p-2"> Laundry Facilities</li>
+           <li class="text-center text-light text-decoration-none p-2"> In-unit washer and dryer</li>
+           <li class="text-center text-light text-decoration-none p-2"> Energy efficient appliances</li>
+           <li class="text-center text-light text-decoration-none p-2"> Workout facility</li>
+          <li class="text-center text-light text-decoration-none p-2"> Fitness classes</li>
+        </ul>
 
-        <div class="d-flex flex-column">
-          <div id="features" class="h2 text-center p-2 text-primary text-decoration-underline">Average Costs</div>
-          <div class="text-center list p-2">Rent = $920/month</div>
-          <div class="text-center list p-2"> Security Deposit = $200 (One-Time)</div>
-          <div class="text-center list p-2"> Pet Fee = $50/month</div>
-          <div class="text-center list p-2"> Laundry Card = $10 (One-Time)</div>
-          <div class="text-center list p-2"> Fitness Center Key Fab = $5 (One-Time)</div>
-          <div class="text-center list p-2"> Water/Sewer = $30/month</div>
-          <div class="text-center list p-2"> Electric = $75</div>
+        <ul class="d-flex flex-column">
+          <div id="features" class="h2 text-center p-2 text-primary">Average Costs</div>
+          
+           <div class="text-center text-light text-decoration-none p-2">Rent = $920/month</div>
+           <div class="text-center text-light text-decoration-none p-2">Security Deposit = $200 (one-time)</div>
+           <div class="text-center text-light text-decoration-none p-2">Pet Fee = $50/month</div>
+           <div class="text-center text-light text-decoration-none p-2">Laundry Card = $10 (One-time)</div>
+           <div class="text-center text-light text-decoration-none p-2">Fitness Center key fab = $5 (one-time)</div>
+           <div class="text-center text-light text-decoration-none p-2">Water/sewer = $30/month</div>
+           <div class="text-center text-light text-decoration-none p-2">Electric = $75/month</div>
 
-        </div>
+        </ul>
 
       </div>
-
 
     </div>
   </div>
 
-
   <!-- Two Button Columns -->
 
-  <div class="d-flex bg-primary pt-4 pb-4 mt-4 mb-4">
+  <div class="d-flex bg-primary pt-4 pb-4 mb-4">
     <a href="#availableUnits" class="col-6 text-center p-3"><button type="button" class="btn btn-success">Available
         Units</button></a>
     <a href="#contact" class="col-6 text-center p-3"><button type="button" class="btn btn-info">Contact
         Us</button></a>
   </div>
 
-
   <!-- Newsletter Section -->
 
-  <div id="newsletter" class="newsletterContainer d-flex justify-content-center w-100 align-items-center"
-    data-tooltipClass="walkthrough" data-title="Newsletter" data-step="4"
-    data-intro="Here is where you can sign up for our monthly newsletter. Just click on the 'Sign Up' link and you will then be prompted to type in User information as well as a password.">
+  <div id="newsletter" class="newsletterContainer d-flex justify-content-center w-100 align-items-center" data-tooltipClass="walkthrough" data-title="Newsletter" data-step="4" data-intro="Here is where you can sign up for our monthly newsletter. Just click on the 'Sign Up' link and you will then be prompted to type in User information as well as a password.">
     <img class="svg mt-2 w-50 mx-0 mb-2" src="assets/subscribe.svg" alt="Sign-Up Form SVG" height="200px" width="auto">
     <div class="p-2 m-3">
       <div id="newsLetter" class="h2 text-center text-success mb-1">Sign up for our newsletter</div>
       <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="btn-success mt-3 w-100">Sign Up</button>
 
-
-
       <!-- Modal Beginning -->
-      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -226,221 +218,95 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-success" data-bs-dismiss="modal">Save Changes</button>
-              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close <span
-                  class="text-white">X</span></button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close <span class="text-white">X</span></button>
             </div>
           </div>
         </div>
       </div>
       <!-- Modal End -->
 
-
     </div>
-  </div>
-
-
-  <hr>
-  <!-- Carousel Section -->
-  <div id="availableUnits" class="h2 text-center pt-4 pb-4 text-primary text-decoration-underline"
-    data-tooltipClass="walkthrough" data-title="Available Units" data-step="5"
-    data-intro="These are some of the units we have that are currently available at our complex">Available Units</div>
-  <div id="carouselWithIndicators" class="carousel slide w-75 d-block m-auto" data-bs-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="0" class="active"></li>
-      <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="1"></li>
-      <li data-bs-target="#carouselWithIndicators" data-bs-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner m-auto" style="max-width: 600px;">
-      <div class="carousel-item active">
-        <img src="assets/apartment1.jpeg" class="d-block w-100" alt="Studio (450 square feet)" style="opacity: 0.5;">
-        <div class="carousel-caption ">
-          <h5 class="fs-3 text-primary fw-bold">Studio (450sqft)</h5>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, delectus!</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="assets/apartment2.jpeg" class="d-block w-100" alt="1 bed, 1 bath (650 square feet)"
-          style="opacity: 0.5;">
-        <div class="carousel-caption  ">
-          <h5 class="fs-3 text-primary fw-bold">1 bed, 1 bath (650sqft)</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, incidunt.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="assets/apartment3.jpeg" class="d-block w-100" alt="2 bed 2 bath (900 square feet)"
-          style="opacity: 0.5;">
-        <div class="carousel-caption  ">
-          <h5 class="fs-3 text-primary fw-bold">2 bed, 2 bath (900sqft)</h5>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, vitae?</p>
-        </div>
-      </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselWithIndicators" role="button" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselWithIndicators" role="button" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </a>
   </div>
 
   <hr>
-  <!-- FAQ Section-->
-  <div id="faq" class="h2 text-center text-primary p-2 text-decoration-underline">Frequently Asked Questions</div>
-  <div class="accordion w-75 d-block m-auto" id="accordionBasic" data-tooltipClass="walkthrough" data-title="FAQ"
-    data-step="6" data-intro="Here is where we answer some of our most frequently asked questions">
-    <div class="accordion-item border-light">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-          aria-expanded="true" aria-controls="collapseOne">
-          When Can I Move-In?
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-        data-bs-parent="#accordionBasic">
-        <div class="accordion-body">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum enim reprehenderit qui omnis porro. Quo
-          facere ratione corrupti sed assumenda minima accusantium, dolorum, inventore deleniti repellat fugit facilis
-          beatae voluptatum?
-        </div>
+  <!-- Available Units Section -->
+  <div id="availableUnits" class="h2 text-center pt-1">
+
+    <div class="fs-2 text-left text-primary m-2 fw-bold">Available Units</div>
+    
+    <div class="p text-light text-center fs-6 mx-4 mt-3 mb-3">Look at some of our award winning rental units that are currently available. Simply click the "Reserve Now" button in order to reserve your unit and then call our help desk number for more information on how to formally submit your rental application. Don't wait too long, these units will go FAST.</div>
+
+    <div class="row d-flex justify-content-center">
+
+      <div class="unit1 reCards col-lg-3 col-md-5 bg-dark m-2 border border-primary">
+        <h4 class="unitOne text-light fs-2 text-center">The Starfish</h4>
+        <ul class="text-light p-2 m-3">
+          <h3 class="text-center mb-4 text-light fw-bold">$895/month:</h3>
+          <li class="amenities"><i class="fa-solid fa-check"></i> 1 bed</li>
+          <li class="amenities"><i class="fa-solid fa-check"></i> 1 bath</li>
+          <li class="amenities"> <i class="fa-solid fa-check"></i> In-Unit Washer/Dryer</li>
+          <li class="amenities"><i class="fa-solid fa-check"></i> Common Area</li>
+          <li class="amenities"><i class="fa-solid fa-check"></i> Workout Facility</li>
+        </ul>
+        <button onclick="unit1()" class="unit1btn d-block m-auto btn btn-success">Reserve Now</button>
       </div>
-    </div>
 
-
-    <!-- FAQ Section (Accordion)-->
-    <div class="accordion-item border-light">
-      <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-          aria-expanded="false" aria-controls="collapseTwo">
-          What Amenities Are Included?
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-        data-bs-parent="#accordionBasic">
-        <div class="accordion-body">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis odit, consequuntur odio ullam
-          cupiditate, voluptatibus nemo quidem, eaque aliquam in illum esse laudantium repellat et ex! Dolorum fugiat
-          odio ab.
-        </div>
+      <div class="unit2 reCards col-lg-4 col-md-5  bg-dark m-2 border border-light">
+        <h4 class="unitTwo text-light fs-2 text-center">*The Sand Dollar*</h4>
+        <ul class="text-light p-2 m-3">
+          <h3 class="text-center mb-4 text-light fw-bold">$945/month:</h3>
+          <li class="amenities"><i class="fa-solid fa-check"></i> 2 bed</li>
+          <li class="amenities"><i class="fa-solid fa-check"></i> 1/2 bath</li>
+          <li class="amenities"> <i class="fa-solid fa-check"></i> In-Unit Washer/Dryer</li>
+          <li class="amenities"><i class="fa-solid fa-check"></i> Common Area</li>
+          <li class="amenities"><i class="fa-solid fa-check"></i> Workout Facility</li>
+        </ul>
+        <button onclick="unit2()" class="unit2btn d-block m-auto btn btn-success">Reserve Now</button>
       </div>
-    </div>
 
-    <div class="accordion-item border-light">
-      <h2 class="accordion-header" id="headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          How Much Is The Security Deposit?
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-        data-bs-parent="#accordionBasic">
-        <div class="accordion-body">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium eum voluptatum beatae nisi. Veritatis,
-          sequi. Laboriosam reprehenderit sed repellat, debitis, saepe optio blanditiis, tenetur at quia veritatis eaque
-          mollitia commodi.
-        </div>
+      <div class="unit3 reCards col-lg-3 col-md-5 bg-dark m-2 border border-warning">
+        <h2 class="unitThree text-light fs-2 text-center">Sea Biscuit</h2>
+        <ul class="text-light p-2 m-3">
+          <h3 class="text-center mb-4 text-light fw-bold">$1095/month:</h3>
+          <li class="amenities"><i class="fa-solid fa-check"></i> 3 bed</li>
+          <li class="amenities"><i class="fa-solid fa-check"></i> 2 bath</li>
+          <li class="amenities"> <i class="fa-solid fa-check"></i> In-Unit Washer/Dryer</li>
+          <li class="amenities"><i class="fa-solid fa-check"></i> Common Area</li>
+          <li class="amenities"><i class="fa-solid fa-check"></i> Workout Facility</li>
+        </ul>
+        <button onclick="unit3()" class="unit3btn d-block m-auto btn btn-success">Reserve Now</button>
       </div>
-    </div>
 
+      <!-- Modal sections -->
+      <div class="row">
 
-    <div class="accordion-item border-light">
-      <h2 class="accordion-header" id="headingFour">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          How Do I Access Payment Portal?
-        </button>
-      </h2>
-      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-        data-bs-parent="#accordionBasic">
-        <div class="accordion-body">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis odit, consequuntur odio ullam
-          cupiditate, voluptatibus nemo quidem, eaque aliquam in illum esse laudantium repellat et ex! Dolorum fugiat
-          odio ab.
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item border-light">
-      <h2 class="accordion-header" id="headingFive">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-          data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-          Is There A "Grace Period" For Overdue Rent?
-        </button>
-      </h2>
-      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-        data-bs-parent="#accordionBasic">
-        <div class="accordion-body">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis odit, consequuntur odio ullam
-          cupiditate, voluptatibus nemo quidem, eaque aliquam in illum esse laudantium repellat et ex! Dolorum fugiat
-          odio ab.
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item border-light">
-      <h2 class="accordion-header" id="headingSix">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
-          aria-expanded="false" aria-controls="collapseSix">
-          What Are The Most Common Lease Terms?
-        </button>
-      </h2>
-      <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
-        data-bs-parent="#accordionBasic">
-        <div class="accordion-body">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis odit, consequuntur odio ullam
-          cupiditate, voluptatibus nemo quidem, eaque aliquam in illum esse laudantium repellat et ex! Dolorum fugiat
-          odio ab.
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-
-  <div id="testimonials"></div>
-  <h2 class="bg-primary text-center p-4 mt-5 text-light fw-bold">Testimonials
-
-    <div class="row d-flex flex column justify-content-center" data-tooltipClass="walkthrough" data-title="Testimonials"
-      data-step="7"
-      data-intro="This is our testimonials section. Here you can read about past clients and their experience renting with us">
-
-
-      <div class="col-lg-3 col-12 m-1 d-flex flex-row justify-content-center">
-
-
-        <div class="card">
-          <img src="../assets/person1.jpeg" class="card-img-top" alt="Person 1">
-          <div class="card-body">
-            <h2 class="card-title fw-bold">Jane Doe</h2>
-            <p class="card-text fs-5">"I can't imagine renting with anyone else"</p>
+        <!-- Unit 1 Modal -->
+        <div class="unit1Modal border border-dark bg-primary text-light fs-2">
+          <h2 class="text-light fs-3 fw-bold">Unit Three</h2>
+          <p class="text-center">Would you like to purchase this plan?</p>
+          <div class="d-flex justify-content-center">
+            <div onclick="checkout()" class="btn btn-success d-block m-auto fw-bold border border-light">YES</div>
+            <div onclick="closeUnit1()" class="btn btn-danger d-block m-auto fw-bold border border-light">NO</div>
           </div>
         </div>
 
-      </div>
-
-      <div class="col-lg-3 col-12 m-1 d-flex flex-row justify-content-center">
-
-
-        <div class="card">
-          <img src="../assets/person2.jpeg" class="card-img-top" alt="Person 2">
-          <div class="card-body">
-            <h2 class="card-title fw-bold">John Stewart</h2>
-            <p class="card-text fs-5">"If you're looking for low prices and high quality then you gotta rent here!" </p>
-
+        <!-- Unit 2 Modal -->
+        <div class="unit2Modal border border-dark bg-primary text-light fs-2">
+          <h2 class="text-light fs-3 fw-bold">Unit 2</h2>
+          <p class="text-center">Would you like to purchase this plan?</p>
+          <div class="d-flex justify-content-center">
+            <div class="btn btn-success d-block m-auto fw-bold border border-light">YES</div>
+            <div onclick="closeUnit2()" class="btn btn-danger d-block m-auto fw-bold border border-light">NO</div>
           </div>
         </div>
 
-      </div>
-
-      <div class="col-lg-3 col-12 m-1 d-flex flex-row justify-content-center">
-
-
-        <div class="card">
-          <img src="../assets/person3.jpeg" class="card-img-top" alt="Person 3">
-          <div class="card-body">
-            <h2 class="card-title fw-bold">Amy Simpson</h2>
-            <p class="card-text fs-5">"I have been renting here for over 10 years and I've loved every minute of it"</p>
+        <!-- Unit 3 Modal -->
+        <div class="unit3Modal border border-dark bg-primary text-light fs-2">
+          <h2 class="text-light fs-3 fw-bold">Unit 3 Modal</h2>
+          <p class="text-center">Would you like to purchase this plan?</p>
+          <div class="d-flex justify-content-center">
+            <div class="btn btn-success d-block m-auto fw-bold border border-light">YES</div>
+            <div onclick="closeUnit3()" class="btn btn-danger d-block m-auto fw-bold border border-light">NO</div>
           </div>
         </div>
 
@@ -448,87 +314,213 @@
 
     </div>
 
+    <hr class="mt-5">
 
-  </h2>
+    <!-- FAQ Section-->
+    <div id="faq" class="h2 text-center text-primary p-2">Frequently Asked Questions</div>
+    <div class="accordion w-75 d-block m-auto" id="accordionBasic" data-tooltipClass="walkthrough" data-title="FAQ" data-step="6" data-intro="Here is where we answer some of our most frequently asked questions">
+      <div class="accordion-item border-light">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            When Can I Move-In?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionBasic">
+          <div class="accordion-body fs-6">
+            You can move in immediately upon submission (and acceptance) of your rental application for any available unit in our apartment complex
+          </div>
+        </div>
+      </div>
 
+      <!-- FAQ Section (Accordion)-->
+      <div class="accordion-item border-light">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            What Amenities Are Included?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionBasic">
+          <div class="accordion-body fs-6">
+           Our amenities include A workout facility, outdoor recreational space, a common area/club house etc.
+          </div>
+        </div>
+      </div>
 
+      <div class="accordion-item border-light">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            How Much Is The Security Deposit?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionBasic">
+          <div class="accordion-body fs-6">
+            The security deposit is one months rent
+          </div>
+        </div>
+      </div>
 
-  <!-- Chart Section (Chart.js)-->
-  <div class="row d-flex justify-content-center pt-4" data-tooltipClass="walkthrough" data-title="Stats" data-step="8"
-    data-intro="Here you will find our stats/charts that compare our rental prices with that of our competitors.">
-    <h2 class="fw-bold text-center text-primary text-decoration-underline mb-3">Rental Prices</h2>
-    <div id="prices" class="col-5 d-block m-auto" style="max-width: 400px;">
-      <div class="h5 text-center text-primary p-2">Our Prices</div>
-      <canvas id="myChart" width="50px" height="50px"></canvas>
+      <div class="accordion-item border-light">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            How Do I Access Payment Portal?
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionBasic">
+          <div class="accordion-body fs-6">
+            Please call our customer service line at 315-426-6610 for further assistance
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-light">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Is There A "Grace Period" For Overdue Rent?
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionBasic">
+          <div class="accordion-body fs-6">
+            There will be a grace period of three days for overdue rent. After the initial grace period you will receive a written notice within one week of your overdue payment
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-light">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            What Lease Terms Do You Offer?
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionBasic">
+          <div class="accordion-body fs-6">
+           At this time we currently offer, 3 month, 6 month, and 12 month lease terms
+          </div>
+        </div>
+      </div>
+
     </div>
-    <div id="prices2" class="col-5 d-block m-auto" style="max-width: 400px;">
-      <div class="h5 text-center text-primary p-2">Our Competitors</div>
-      <canvas id="myChart2" width="50px" height="50px"></canvas>
+
+    <div id="testimonials"></div>
+    <h2 class="bg-primary text-center p-4 mt-4 mb-4 text-light fw-bold">Testimonials
+
+      <div class="row d-flex flex column justify-content-center mt-4" data-tooltipClass="walkthrough" data-title="Testimonials" data-step="7" data-intro="This is our testimonials section. Here you can read about past clients and their experience renting with us">
+        
+        <p class="text-center text-light fs-5">Check out what our past renters have said</p>
+
+        <div class="col-lg-3 col-12 m-1 d-flex flex-row justify-content-center">
+
+          <div class="card">
+            <img src="../assets/person1.jpeg" class="card-img-top" alt="Person 1">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Jane Doe</h5>
+              <p class="card-text fs-5">"I can't imagine renting with anyone else"</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-12 m-1 d-flex flex-row justify-content-center">
+
+          <div class="card">
+            <img src="../assets/person2.jpeg" class="card-img-top" alt="Person 2">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">John Stewart</h5>
+              <p class="card-text fs-5">"If you're looking for low prices and high quality then you gotta rent here!" </p>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-12 m-1 d-flex flex-row justify-content-center">
+
+          <div class="card">
+            <img src="../assets/person3.jpeg" class="card-img-top" alt="Person 3">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Amy Simpson</h5>
+              <p class="card-text fs-5">"I have been renting here for over 10 years and I've loved every minute of it"</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </h2>
+
+
+    <!-- Chart Section (Chart.js)-->
+    <div class="row d-flex justify-content-center pt-4" data-tooltipClass="walkthrough" data-title="Stats" data-step="8" data-intro="Here you will find our stats/charts that compare our rental prices with that of our competitors.">
+      <h2 class="fw-bold text-center text-primary mb-3">Rental Prices</h2>
+      <div id="prices" class="col-5 d-block m-auto" style="max-width: 400px;">
+        <div class="h5 text-center text-primary p-2">Our Prices</div>
+        <canvas id="myChart" width="50px" height="50px"></canvas>
+      </div>
+      <div id="prices2" class="col-5 d-block m-auto" style="max-width: 400px;">
+        <div class="h5 text-center text-primary p-2">Our Competitors</div>
+        <canvas id="myChart2" width="50px" height="50px"></canvas>
+      </div>
     </div>
-  </div>
-  <hr>
+    <hr>
 
-  <!-- Feedback Form -->
-  <div id="contact" class="h2 text-center text-primary p-4 text-decoration-underline">Contact Us</div>
-  <div class="col-12 w-75 m-auto" data-tooltipClass="walkthrough" data-title="Contact Form" data-step="9"
-    data-intro="Lastly, if you have any feedback for us or just need to get in touch with us please use the form below.">
-    <form action="contact.txt" class="row g-3 needs-validation">
-      <div class="col-md-6">
-        <label for="validationCustom01" class="form-label">First name</label>
-        <input type="text" class="form-control" id="validationCustom01" required>
-        <div class="valid-feedback">
-          Looks good!
+    <!-- Feedback Form -->
+    <div id="contact" class="h2 text-center text-primary p-4">Contact Us</div>
+    <div class="col-12 w-75 m-auto" data-tooltipClass="walkthrough" data-title="Contact Form" data-step="9" data-intro="Lastly, if you have any feedback for us or just need to get in touch with us please use the form below.">
+      <form action="contact.txt" class="row g-3 needs-validation">
+        <div class="col-md-6">
+          <label for="validationCustom01" class="form-label fs-4">First name</label>
+          <input type="text" class="form-control" id="validationCustom01" required placeholder="Please enter your first name...">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <label for="validationCustom02" class="form-label">Last name</label>
-        <input type="text" class="form-control" id="validationCustom02" required>
-        <div class="valid-feedback">
-          Looks good!
+        <div class="col-md-6">
+          <label for="validationCustom02" class="form-label fs-4">Last name</label>
+          <input type="text" class="form-control" id="validationCustom02" required placeholder="Please enter your last name...">
+          <div class="valid-feedback">
+            Looks good!
+          </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <label for="validationCustom03" class="form-label">City</label>
-        <input type="text" class="form-control" id="validationCustom03" required>
-        <div class="invalid-feedback">
-          Please provide a valid city.
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label fs-4">City</label>
+          <input type="text" class="form-control" id="validationCustom03" required placeholder="Please enter your city...">
+          <div class="invalid-feedback">
+            Please provide a valid city.
+          </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <label for="validationCustom04" class="form-label">State</label>
-        <select class="form-select" id="validationCustom04" required>
-          <option selected="null"></option>
-          <option>NY</option>
-          <option>DE</option>
-          <option>PA</option>
-          <option>Other</option>
-        </select>
-        <div class="invalid-feedback">
-          Please select a valid state.
+        <div class="col-md-3">
+          <label for="validationCustom04" class="form-label fs-4">State</label>
+          <select class="form-select" id="validationCustom04">
+            <option selected="null">Please choose your state below:</option>
+            <option>NY</option>
+            <option>DE</option>
+            <option>PA</option>
+            <option>Other</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid state.
+          </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <label for="validationCustom05" class="form-label">Zip</label>
-        <input type="text" class="form-control" id="validationCustom05" required>
-        <div class="invalid-feedback">
-          Please provide a valid zip.
+        <div class="col-md-3">
+          <label for="validationCustom05" class="form-label fs-4">Zip</label>
+          <input type="text" class="form-control" id="validationCustom05" required placeholder="Please enter your zip code...">
+          <div class="invalid-feedback">
+            Please provide a valid zip.
+          </div>
         </div>
-      </div>
-      <div class="col-12">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="invalidCheck" required>
-          <label class="form-check-label" for="invalidCheck">
-            Agree to terms and conditions
-          </label>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input fs-5 mt-2" type="checkbox" id="invalidCheck" required>
+            <label class="form-check-label fs-4" for="invalidCheck">
+              Agree to terms and conditions
+            </label>
+          </div>
         </div>
-      </div>
-      <div class="d-flex justify-content-center mb-5">
-        <button class="btn btn-primary w-50 border-light" type="submit">Submit form</button>
-      </div>
-    </form>
-  </div>
-
-
+        <div class="d-flex justify-content-center mb-5">
+          <button class="btn btn-primary w-50 border-light" type="submit">Submit form</button>
+        </div>
+      </form>
+    </div>
 
   </div>
 
