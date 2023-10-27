@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /* Imported Roboto Font */
+=======
+// Imported Roboto Font
+>>>>>>> eb397786b9e6943cfa2c48ff69de6a82fcb36d5a
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 
@@ -10,7 +14,11 @@
   font-size: 15px;
 }
 
+<<<<<<< HEAD
 /* Features Container */
+=======
+// Features Container
+>>>>>>> eb397786b9e6943cfa2c48ff69de6a82fcb36d5a
 
 
 .featuresContainer:hover {
@@ -30,7 +38,11 @@
   cursor: default;
 }
 
+<<<<<<< HEAD
 /* Available Units Section */
+=======
+// Available Units Section
+>>>>>>> eb397786b9e6943cfa2c48ff69de6a82fcb36d5a
 
 .amenities {
   font-size: 20px;
@@ -50,7 +62,10 @@
   color: #cd7f32;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> eb397786b9e6943cfa2c48ff69de6a82fcb36d5a
 .unit2 {
   border: 3px solid #c0c0c0;
 }
@@ -81,9 +96,14 @@
 
 .reCards {
   border-radius: 20px;
+<<<<<<< HEAD
   height: 600px;
   padding: 2.5rem;
   object-fit: contain;
+=======
+  height: 400px;
+  padding: 2.5rem;
+>>>>>>> eb397786b9e6943cfa2c48ff69de6a82fcb36d5a
 }
 
 .reCards:hover {
@@ -92,7 +112,11 @@
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 /* Modal Section */
+=======
+// Modal Section
+>>>>>>> eb397786b9e6943cfa2c48ff69de6a82fcb36d5a
 .unit1Modal,
 .unit2Modal,
 .unit3Modal {
@@ -120,7 +144,11 @@
 }
 
 
+<<<<<<< HEAD
 /* Contact Section */
+=======
+// Contact Section 
+>>>>>>> eb397786b9e6943cfa2c48ff69de6a82fcb36d5a
 
 input[type="text"] {
   padding: 3px !important;
