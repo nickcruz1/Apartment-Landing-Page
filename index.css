@@ -12,6 +12,9 @@
 
 /* Features Container */
 
+li {
+  list-style-type: none !important;
+}
 
 .featuresContainer:hover {
   cursor: default;
@@ -80,7 +83,6 @@
 
 .reCards {
   border-radius: 20px;
-  height: 600px;
   padding: 2.5rem;
   object-fit: contain;
 }
